@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= monument.name %></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .card {
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+        .card-img-top {
+            padding-top: 2px;
+            width: 70%; 
+            height: auto; /* Maintain aspect ratio */
+            object-fit: contain; 
+            margin: auto; 
+            border-radius: 4px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4 text-center text-primary"><%= monument.name %></h1>
+        <div class="card">
+            <img src="<%= monument.image %>" class="card-img-top" alt="<%= monument.name %>">
+            <div class="card-body">
+                <p class="card-text"><%= monument.description %></p>
+                <p class="card-text"><strong>Timings</strong> <%= monument.timings %></p>
+                <p class="card-text"><strong>Entry:</strong> <%= monument.entry %></p>
+                <p class="card-text"><strong>Speciality</strong> <%= monument.speciality %></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
